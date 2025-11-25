@@ -9,39 +9,39 @@
 </head>
 <body>
     <div class="container">
-<header>
-    <div class="logo">
-        <a href="../index.html">
-            <img src=".../assets/logo-verinex-modo-claro.jpg" alt="VERINEX Logo" class="light-logo">
-            <img src="../assets/logo-verinex-modo-escuro.jpg" alt="VERINEX Logo" class="dark-logo">
-            <h1>VERINEX</h1>
-        </a>
-    </div>
-    
-    <nav class="main-nav">
-        <a href="../index.html" class="nav-link">Início</a>
-        <a href="telegram.html" class="nav-link">Telegram</a>
-        <a href="como-usar.html" class="nav-link">Como Usar</a>
-        <a href="faq.html" class="nav-link">FAQ</a>
-        <a href="contato.html" class="nav-link">Contato</a>
-    </nav>
-    
-    <button class="mobile-menu-btn" id="mobileMenuBtn">
-        <i class="fas fa-bars"></i>
-    </button>
-    
-    <nav class="mobile-nav" id="mobileNav">
-        <a href="../index.html" class="nav-link">Início</a>
-        <a href="telegram.html" class="nav-link">Telegram</a>
-        <a href="como-usar.html" class="nav-link">Como Usar</a>
-        <a href="faq.html" class="nav-link">FAQ</a>
-        <a href="contato.html" class="nav-link">Contato</a>
-    </nav>
-    
-    <button class="theme-toggle" id="themeToggle">
-        <i class="fas fa-moon"></i>
-    </button>
-</header>
+        <header>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/logo-verinex-modo-claro.jpg" alt="VERINEX Logo" class="light-logo">
+                    <img src="../assets/logo-verinex-modo-escuro.jpg" alt="VERINEX Logo" class="dark-logo">
+                    <h1>VERINEX</h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="../index.html" class="nav-link">Início</a>
+                <a href="telegram.html" class="nav-link">Telegram</a>
+                <a href="como-usar.html" class="nav-link">Como Usar</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="contato.html" class="nav-link active">Contato</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="../index.html" class="nav-link">Início</a>
+                <a href="telegram.html" class="nav-link">Telegram</a>
+                <a href="como-usar.html" class="nav-link">Como Usar</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="contato.html" class="nav-link">Contato</a>
+            </nav>
+            
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
 
         <section class="page-hero">
             <div class="page-hero-content">
@@ -90,6 +90,59 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="social-links">
+                        <h3>Siga-nos</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Envie uma mensagem</h3>
+                        
+                        <div class="form-group">
+                            <label for="name">Nome completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="duvida">Dúvida sobre uso</option>
+                                <option value="sugestao">Sugestão de melhoria</option>
+                                <option value="problema">Problema técnico</option>
+                                <option value="parceria">Proposta de parceria</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Descreva sua dúvida, sugestão ou problema..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -121,7 +174,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="logo">
-                        <img src=".../assets/logo-verinex-modo-claro.jpg" alt="VERINEX Logo" class="light-logo"> 
+                        <img src="../assets/logo-verinex-modo-claro.jpg" alt="VERINEX Logo" class="light-logo"> 
                         <img src="../assets/logo-verinex-modo-escuro.jpg" alt="VERINEX Logo" class="dark-logo">
                         <h3>VERINEX</h3>
                     </div>
@@ -151,21 +204,18 @@
 
     <script src="../js/script.js"></script>
     <script>
-        // Contact form handling
         document.addEventListener('DOMContentLoaded', function() {
             const contactForm = document.getElementById('contactForm');
             
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                // Simulate form submission
                 const submitBtn = contactForm.querySelector('.submit-btn');
                 const originalText = submitBtn.innerHTML;
                 
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
                 submitBtn.disabled = true;
                 
-                // Simulate API call
                 setTimeout(() => {
                     showNotification('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
                     contactForm.reset();
