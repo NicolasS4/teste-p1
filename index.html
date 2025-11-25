@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERINEX - Verificador de Fake News</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+<header>
+    <div class="logo">
+        <a href="../index.html">
+            <img src="../assets/logo-verinex-modo-claro.jpg" alt="VERINEX Logo" class="light-logo">
+            <img src="../assets/logo-verinex-modo-escuro.jpg" alt="VERINEX Logo" class="dark-logo">
+            <h1>VERINEX</h1>
+        </a>
+    </div>
+    
+    <nav class="main-nav">
+        <a href="../index.html" class="nav-link">Início</a>
+        <a href="telegram.html" class="nav-link">Telegram</a>
+        <a href="como-usar.html" class="nav-link">Como Usar</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+    </nav>
+    
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="../index.html" class="nav-link">Início</a>
+        <a href="telegram.html" class="nav-link">Telegram</a>
+        <a href="como-usar.html" class="nav-link">Como Usar</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contato.html" class="nav-link">Contato</a>
+    </nav>
+    
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+</header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Verifique a veracidade de notícias em segundos</h2>
+                <p>Cole o texto da notícia abaixo e descubra a probabilidade de ser verdadeira com nossa tecnologia de verificação avançada baseada em IA.</p>
+                
+                <div class="verifier-container">
+                    <div class="input-group">
+                        <label for="newsInput">
+                            <i class="fas fa-newspaper"></i>
+                            Insira a notícia para verificação:
+                        </label>
+                        <textarea id="newsInput" placeholder="Cole o texto da notícia aqui... Exemplo: 'Presidente anuncia nova medida econômica...'"></textarea>
+                        <div class="char-counter">
+                            <span id="charCount">0</span> caracteres
+                        </div>
+                    </div>
+                    
+                    <button class="verify-btn" id="verifyBtn">
+                        <i class="fas fa-search"></i>
+                        Verificar Veracidade
+                        <span class="loading-spinner"></span>
+                    </button>
+                    
+                    <div class="result-container" id="resultContainer">
+                        <div class="result-header">
+                            <div class="result-title">
+                                <i class="fas fa-chart-bar"></i>
+                                Resultado da Verificação:
+                            </div>
+                            <div class="percentage" id="percentage">0%</div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" id="progressBar"></div>
+                        </div>
+                        <div class="confidence-level" id="confidenceLevel">
+                            <span class="level-badge" id="levelBadge">Baixa Confiança</span>
+                        </div>
+                        <div class="result-description" id="resultDescription">
+                            Nossa análise indica que esta notícia tem uma probabilidade de ser verdadeira.
+                        </div>
+                        <div class="result-actions">
+                            <button class="action-btn share-btn">
+                                <i class="fas fa-share"></i>
+                                Compartilhar
+                            </button>
+                            <button class="action-btn new-check-btn">
+                                <i class="fas fa-plus"></i>
+                                Nova Verificação
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Rápido</h3>
+                    <p>Análise instantânea usando inteligência artificial avançada</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Confiável</h3>
+                    <p>Baseado em múltiplas fontes verificadas e algoritmos precisos</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Intuitivo</h3>
+                    <p>Interface simples e resultados claros para qualquer usuário</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="telegram-option">
+            <div class="telegram-container">
+                <div class="telegram-content">
+                    <h3>Verifique direto pelo Telegram</h3>
+                    <p>Adicione nosso bot no Telegram para verificar notícias instantaneamente enquanto navega</p>
+                    <a href="pages/telegram.html" class="telegram-btn">
+                        <i class="fab fa-telegram"></i>
+                        Usar VERINEX no Telegram
+                    </a>
+                </div>
+                <div class="telegram-preview">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="telegram-chat">
+                                <div class="chat-message bot-message">
+                                    <strong>VERINEX Bot</strong>
+                                    <p>Envie uma notícia para verificação</p>
+                                </div>
+                                <div class="chat-message user-message">
+                                    <p>Presidente anunciou novo imposto?</p>
+                                </div>
+                                <div class="chat-message bot-message">
+                                    <strong>VERINEX Bot</strong>
+                                    <p>📊 Veracidade: 85%<br>✅ Notícia verificada</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="assets/logo-verinex-modo-claro.jpg" alt="VERINEX Logo" class="light-logo"> 
+                        <img src="assets/logo-verinex-modo-escuro.jpg" alt="VERINEX Logo" class="dark-logo">
+                        <h3>VERINEX</h3>
+                    </div>
+                    <p>Combate à desinformação com tecnologia avançada</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="index.html">Verificador Online</a></li>
+                        <li><a href="pages/telegram.html">Bot do Telegram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="pages/como-usar.html">Como Usar</a></li>
+                        <li><a href="pages/faq.html">Perguntas Frequentes</a></li>
+                        <li><a href="pages/contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>VERINEX &copy; 2025 - Todos os direitos reservados</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
