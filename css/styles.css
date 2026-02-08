@@ -1714,3 +1714,139 @@ footer {
         font-size: 1.125rem;
     }
 }
+/* Adicione estas regras ao seu CSS existente */
+
+/* Animações de loading */
+.btn.loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-danger {
+    background: rgba(244, 67, 54, 0.2);
+    color: #F44336;
+    border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.badge-warning {
+    background: rgba(255, 152, 0, 0.2);
+    color: #FF9800;
+    border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.badge-info {
+    background: rgba(33, 150, 243, 0.2);
+    color: #2196F3;
+    border: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.badge-success {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+/* Barra de progresso aprimorada */
+.veracity-low {
+    background: linear-gradient(90deg, #F44336, #FF5722);
+}
+
+.veracity-medium-low {
+    background: linear-gradient(90deg, #FF9800, #FFC107);
+}
+
+.veracity-medium {
+    background: linear-gradient(90deg, #FFC107, #8BC34A);
+}
+
+.veracity-high {
+    background: linear-gradient(90deg, #8BC34A, #4CAF50);
+}
+
+.veracity-very-high {
+    background: linear-gradient(90deg, #4CAF50, #2196F3);
+}
+
+/* Container de análise */
+.analysis-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.analysis-container.active {
+    max-height: 1000px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Log de análise */
+.analysis-log {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+/* Estilo para dark/light mode */
+body.dark-mode .analysis-stats {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body:not(.dark-mode) .analysis-stats {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .analysis-log {
+        max-height: 150px;
+    }
+    
+    .example-btn {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .example-badge {
+        align-self: flex-start;
+    }
+}
